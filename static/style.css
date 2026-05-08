@@ -1,0 +1,27 @@
+body{
+
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+}
+
+.container{
+
+    margin-top:50px;
+}
+
+button{
+
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+}
+
+img{
+
+    margin-top:20px;
+    border-radius:20px;
+}

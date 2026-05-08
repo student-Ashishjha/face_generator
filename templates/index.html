@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Face Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Face Generator</h1>
+
+        <button onclick="generateFace()">
+            Generate Face
+        </button>
+
+        <br><br>
+
+        <img
+            id="face"
+            src=""
+            width="300"
+        >
+
+    </div>
+
+<script>
+
+async function generateFace(){
+
+    const response =
+        await fetch('/generate')
+
+    const data =
+        await response.json()
+
+    document.getElementById("face").src =
+        data.image + "?t=" + new Date().getTime()
+}
+
+</script>
+
+</body>
+
+</html>
